@@ -280,7 +280,9 @@ def broken_5(circle, window):
     What goes out:  Nothing (i.e., None).
     Side effects:
       Draws the given rg.Circle and an rg.Square that circumscribes it,
-         both on the given rg.RoseWindow. 
+         both on the given rg.RoseWindow,
+         with the rg.Square having the same OUTLINE color
+         as the FILL color of the given rg.Circle.
       
       Must  ** render **     but   ** NOT close **   the window.
 
