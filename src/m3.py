@@ -4,11 +4,18 @@ This module lets you practice DEBUGGING when LOGIC ERRORS occur.
 That is, no run-time exception occurs, but the function simply
 does not do the right thing.
 
-Authors: David Mutchler, Yiji Zhang, Mark Hays, Derek Whitley, Vibha Alangar,
-         Matt Boutell, Dave Fisher, Sriram Mohan, Mohammed Noureddine,
-         Amanda Stouder, Curt Clifton, Valerie Galluzzi, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 
 ###############################################################################
@@ -41,8 +48,9 @@ Authors: David Mutchler, Yiji Zhang, Mark Hays, Derek Whitley, Vibha Alangar,
 #
 ###############################################################################
 
+
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
 
 
 ###############################################################################
@@ -78,26 +86,26 @@ def is_prime(n):
 #           There are NO errors in the TESTS.
 ###############################################################################
 def run_test_broken_1():
-    """ Tests the  broken_1  function. """
+    """Tests the  broken_1  function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   broken_1   function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   broken_1   function:")
+    print("--------------------------------------------------")
 
     expected = 3
     actual = broken_1(3)  # Test 1 of broken_1
-    print('Expected:', expected)
-    print('Actual:  ', actual)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
 
     expected = 4
     actual = broken_1(10)  # Test 2 of broken_1
-    print('Expected:', expected)
-    print('Actual:  ', actual)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
 
     expected = 135  # Yes, this is the correct answer
     actual = broken_1(1000)  # Test 3 of broken_1
-    print('Expected:', expected)
-    print('Actual:  ', actual)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
 
 
 # -----------------------------------------------------------------------------
@@ -113,7 +121,7 @@ def broken_1(m):
     Examples:
       If m is 3, this function returns 3 since there
         are 3 primes between 3 and 7 (namely: 3, 5, and 7).
-        
+
       If m is 10, then this function returns 4 since there
         are 4 primes between 10 and 21 (namely: 11, 13, 17 and 19).
 

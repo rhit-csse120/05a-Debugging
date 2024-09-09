@@ -1,11 +1,18 @@
 """
 This module lets you practice DEBUGGING when RUN-TIME EXCEPTIONS occur.
 
-Authors: David Mutchler, Yiji Zhang, Mark Hays, Derek Whitley, Vibha Alangar,
-         Matt Boutell, Dave Fisher, Sriram Mohan, Mohammed Noureddine,
-         Amanda Stouder, Curt Clifton, Valerie Galluzzi, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 import rosegraphics as rg
 
@@ -85,7 +92,7 @@ import rosegraphics as rg
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
     run_test_all()
 
 
@@ -94,44 +101,44 @@ def main():
 #           There are NO errors in the TESTS.
 ###############################################################################
 def run_test_all():
-    """ Tests ALL the functions in this module. """
+    """Tests ALL the functions in this module."""
     # Test broken_1:
-    window = rg.RoseWindow(title='Testing BROKEN_1')
+    window = rg.RoseWindow(title="Testing BROKEN_1")
     circle1 = rg.Circle(rg.Point(50, 50), 15)
-    circle1.fill_color = 'blue'
+    circle1.fill_color = "blue"
     broken_1(circle1, window)  # Test 1 of broken_1
 
     circle2 = rg.Circle(rg.Point(70, 150), 30)
-    circle2.fill_color = 'red'
+    circle2.fill_color = "red"
     broken_1(circle2, window)  # Test 2 of broken_1
     window.close_on_mouse_click()
 
     # Test broken_2:
-    window = rg.RoseWindow(title='Testing BROKEN_2')
+    window = rg.RoseWindow(title="Testing BROKEN_2")
     broken_2(50, 75, window)  # Test 1 of broken_2
     broken_2(100, 150, window)  # Test 2 of broken_2
     window.close_on_mouse_click()
 
     # Test broken_3:
-    window = rg.RoseWindow(title='Testing BROKEN_3')
+    window = rg.RoseWindow(title="Testing BROKEN_3")
     broken_3(5, rg.Point(100, 50), 80, 20, window)  # Test 1 of broken_3
     broken_3(3, rg.Point(50, 150), 40, 50, window)  # Test 2 of broken_3
     window.close_on_mouse_click()
 
     # Test broken_4:
-    window = rg.RoseWindow(title='Testing BROKEN_4')
+    window = rg.RoseWindow(title="Testing BROKEN_4")
     broken_4(50, 75, 40, window)  # Test 1 of broken_4
     broken_4(100, 150, 75, window)  # Test 2 of broken_4
     window.close_on_mouse_click()
 
     # Test broken_5:
-    window = rg.RoseWindow(title='Testing BROKEN_5')
+    window = rg.RoseWindow(title="Testing BROKEN_5")
     circle = rg.Circle(rg.Point(100, 50), 30)
-    circle.fill_color = 'pink'
+    circle.fill_color = "pink"
     broken_5(circle, window)  # Test 1 of broken_5
 
     circle = rg.Circle(rg.Point(250, 100), 80)
-    circle.fill_color = 'red'
+    circle.fill_color = "red"
     broken_5(circle, window)  # Test 2 of broken_5
     window.close_on_mouse_click()
 
@@ -139,18 +146,18 @@ def run_test_all():
     expected = 1.8333333
     actual = broken_6(3)  # Test 1 of broken_6
     print("Testing BROKEN_6:\n")
-    print('Expected for BROKEN_6, Test 1:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 1:', actual)
+    print("Expected for BROKEN_6, Test 1:", expected, "(approximately)")
+    print("  Actual for BROKEN_6, Test 1:", actual)
 
     expected = 5.1873775
     actual = broken_6(100)  # Test 2 of broken_6
     print()
-    print('Expected for BROKEN_6, Test 2:', expected, '(approximately)')
-    print('  Actual for BROKEN_6, Test 2:', actual)
+    print("Expected for BROKEN_6, Test 2:", expected, "(approximately)")
+    print("  Actual for BROKEN_6, Test 2:", actual)
     print()
 
     # Test broken_7:
-    window = rg.RoseWindow(title='Testing BROKEN_7')
+    window = rg.RoseWindow(title="Testing BROKEN_7")
     broken_7(5, rg.Point(100, 50), 80, 20, window)  # Test 1 of broken_7
     broken_7(3, rg.Point(50, 150), 40, 50, window)  # Test 2 of broken_7
     window.close_on_mouse_click()
@@ -169,7 +176,7 @@ def broken_1(circle, window):
         then draws another rg.Circle whose RADIUS
         is TWICE that of the given rg.Circle
         and whose center is the same as that of the given rg.Circle.
-        
+
       Must  ** render **     but   ** NOT close **   the window.
 
     Type hints:
@@ -193,14 +200,14 @@ def broken_2(x, y, window):
     Side effects:
       Draws a rg.Circle with radius 33, centered at (x, y),
         on the given rg.RoseWindow.
-      
+
       Must  ** render **     but   ** NOT close **   the window.
-          
+
     Type hints:
       :type x:      int
       :type y:      int
       :type window: rg.RoseWindow
-      """
+    """
     circle = rg.Circle((x, y), 33)
     circle.attach_to(window)
     window.render()
@@ -255,17 +262,17 @@ def broken_4(x, y, radius, window):
     Side effects:
       Draws a green-filled rg.Circle with the given radius,
         centered at (x, y), on the given rg.RoseWindow
-      
+
       Must  ** render **     but   ** NOT close **   the window.
-          
+
     Type hints:
       :type x:      int
       :type y:      int
       :type radius: int
       :type window: rg.RoseWindow
-      """
-    circle = rg.Circle(rg.Point(x, y), 'radius')
-    circle.fill_color = 'green'
+    """
+    circle = rg.Circle(rg.Point(x, y), "radius")
+    circle.fill_color = "green"
     circle.attach_to(window)
     window.render()
 
@@ -283,7 +290,7 @@ def broken_5(circle, window):
          both on the given rg.RoseWindow,
          with the rg.Square having the same OUTLINE color
          as the FILL color of the given rg.Circle.
-      
+
       Must  ** render **     but   ** NOT close **   the window.
 
     Type hints:
