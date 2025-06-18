@@ -2,7 +2,7 @@
 This module lets you practice DEBUGGING when RUN-TIME EXCEPTIONS occur,
 focusing here on AttributeError exceptions:
   'BLAHType' object has no attribute 'FOO'
-  
+
 and on TypeError exceptions, in particular those of the form:
   'BLAHType' object is not callable.
 
@@ -281,5 +281,7 @@ def broken_6(n):
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
+# This unusual form is necessary for the special testing we provided.
 # -----------------------------------------------------------------------------
-main()
+if __name__ == "__main__":
+    main()
