@@ -257,7 +257,7 @@ def broken_3(n, point, length, distance_between_lines, window):
 # -----------------------------------------------------------------------------
 def broken_4(x, y, radius, window):
     """
-    What comes in: Positive integers x and y, and an rg.RoseWindow.
+    What comes in: Positive integers x and y, a radius, and an rg.RoseWindow.
     What goes out:  Nothing (i.e., None).
     Side effects:
       Draws a green-filled rg.Circle with the given radius,
